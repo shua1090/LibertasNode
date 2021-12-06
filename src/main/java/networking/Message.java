@@ -32,7 +32,10 @@ public class Message {
             messagelen[i] = data[i+2];
         }
         m.MessageLength = ByteUtils.bytesToLong(messagelen);
-        for (int i = 0; i < m.MessageLength; i++)
+        for (int i = 0; i < m.MessageLength; i++){
+            m.data[i] = data[10+i];
+        }
+        
         return m;
     }
 
