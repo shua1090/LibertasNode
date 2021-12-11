@@ -1,3 +1,5 @@
+package Blockchain;
+
 enum BlockType{
     ORTHODOX_BLOCK,
     TREE_BLOCK_PARENT,
@@ -5,19 +7,12 @@ enum BlockType{
 }
 
 interface Block {
-    byte[] serializeBlock();
-    static Block deserializeBlock(byte[] serializedBlock);
-    getBlockType();
+    abstract byte[] serializeBlock();
+    abstract BlockType getBlockType();
+
 }
 
-class OBlock implements Block {
-    
-
-    public byte[] serializeBlock(){
-
-    }
-
-    public OBlock deserializeBlock(byte[] serializedBlock){
-
-    }
-}
+//// Finish
+//class OBlock extends Block {
+//
+//}
