@@ -11,30 +11,15 @@
     <packaging>pom</packaging>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
         <dependency>
-            <groupId>com.offbynull.kademlia</groupId>
-            <artifactId>kademlia</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/kademlia-1.0.0-SNAPSHOT.jar</systemPath>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.70</version>
         </dependency>
-
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <mainClass>com..Exec</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-<!--  <modules>-->
-<!--    <module>./kademlia</module>-->
-<!--  </modules>-->
+    <modules>-->
+       <module>./kademlia</module>
+    </modules>
 </project>

@@ -2,10 +2,13 @@ package Addressing;
 
 public class Address {
     byte[] address;
-    byte[] serializeAddress(){
-        return null;
+
+    public Address(PublicKey pubkey){
+        this.address = pubkey.encoded();
     }
-    static Address deserializeAddress(byte[] data){
-        return null;
-    } 
+    
+    // @Override
+    // public String toString(){
+    //     return 
+    // }
 }
