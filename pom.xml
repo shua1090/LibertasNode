@@ -17,9 +17,15 @@
             <artifactId>bcprov-jdk15on</artifactId>
             <version>1.70</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.offbynull.kademlia</groupId>
+            <artifactId>kademlia</artifactId>
+            <scope>system</scope>
+            <version>1.0.0-SNAPSHOT</version>
+            <systemPath>${basedir}\src\main\resources\kademlia-1.0.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+
     </dependencies>
 
-    <modules>-->
-       <module>./kademlia</module>
-    </modules>
 </project>
