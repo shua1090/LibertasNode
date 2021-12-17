@@ -14,7 +14,9 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 
-class Wallet{
+
+class Wallet {
+    
     PublicKey public_address;
     PrivateKey privateKey;
 
@@ -51,6 +53,9 @@ class Wallet{
                 '}';
     }
 
+
+    // TODO: Consider SSL?
+    // TODO: Try this? SHA3-512withECDSA
     public static Wallet loadWallet(String path){
         try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(path))) {
             int pubKeyLength = ByteUtils.convertByteArrayToInt(bis.readNBytes(4));
@@ -83,18 +88,6 @@ class Wallet{
         }
     }
 
-    static class ByteUtils{
-        public static byte[] intToBytes( final int i ) {
-            ByteBuffer bb = ByteBuffer.allocate(4);
-            bb.putInt(i); 
-            return bb.array();
-        }
-        public static int convertByteArrayToInt(byte[] intBytes){
-            ByteBuffer byteBuffer = ByteBuffer.wrap(intBytes);
-            return byteBuffer.getInt();
-        }
-    }
-
     private static KeyPair GenerateKeys() {
         try {
             ECParameterSpec ecSpec = ECNamedCurveTable.getParameterSpec("B-571");
@@ -106,7 +99,7 @@ class Wallet{
             throw new RuntimeException("Error generating Key, see above^");
         }
     }
-
+    
     /**
      * Signs the message
      *

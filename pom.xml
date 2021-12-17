@@ -3,7 +3,7 @@
 
   <groupId>com.Libertas.Node</groupId>
   <artifactId>LibertasNode</artifactId>
-    <version>1</version>
+    <version>1.0.0-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -23,7 +23,7 @@
             <artifactId>kademlia</artifactId>
             <scope>system</scope>
             <version>1.0.0-SNAPSHOT</version>
-            <systemPath>${basedir}\src\main\resources\kademlia-1.0.0-SNAPSHOT.jar</systemPath>
+            <systemPath>${basedir}/src/main/resources/kademlia-1.0.0-SNAPSHOT.jar</systemPath>
         </dependency>
 
     </dependencies>

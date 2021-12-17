@@ -1,4 +1,4 @@
-package networking;
+package Networking;
 
 import com.offbynull.kademlia.*;
 import java.nio.ByteBuffer;
