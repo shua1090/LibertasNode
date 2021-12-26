@@ -1,3 +1,7 @@
+package Utils;
+
+import java.nio.ByteBuffer;
+
 public class ByteUtils {
     public static byte[] intToBytes( final int i ) {
         ByteBuffer bb = ByteBuffer.allocate(4);
@@ -15,8 +19,8 @@ public class ByteUtils {
         return bb.array();
     }
 
-    public static int convertByteArrayToLong(byte[] intBytes){
+    public static long convertByteArrayToLong(byte[] intBytes){
         ByteBuffer byteBuffer = ByteBuffer.wrap(intBytes);
-        return byteBuffer.getLong():
+        return byteBuffer.getLong();
     }
 }
